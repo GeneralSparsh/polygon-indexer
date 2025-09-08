@@ -1,0 +1,19 @@
+{
+  "name": "polygon-indexer-ui",
+  "version": "1.0.0",
+  "description": "Galaxy-themed UI for Polygon POL Token Indexer",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.0"
+  }
+}

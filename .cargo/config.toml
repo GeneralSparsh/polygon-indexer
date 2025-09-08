@@ -1,0 +1,26 @@
+[build]
+# Build with the GNU toolchain target by default.
+target = "x86_64-pc-windows-gnu"
+
+[target.x86_64-pc-windows-gnu]
+# Use gcc as the linker for the GNU target.
+linker = "gcc"
+
+[env]
+# Tell Cargo which linker to use for the GNU target (maps to -C linker).
+CARGO_TARGET_X86_64_PC_WINDOWS_GNU_LINKER = "gcc"
+
+# Optional: expose C toolchain tools for build scripts (cc/c++/ar).
+CC = "gcc"
+CXX = "g++"
+AR = "ar"
+
+# Target-scoped env for cross-compile aware build scripts.
+CC_x86_64-pc-windows-gnu = "gcc"
+CXX_x86_64-pc-windows-gnu = "g++"
+AR_x86_64-pc-windows-gnu = "ar"
+
+# IMPORTANT: Do NOT force MSVC to use gcc. If you ever build MSVC target,
+# it should use Microsoft's linker (link.exe). Leave MSVC unset here.
+# [target.x86_64-pc-windows-msvc]
+# linker = "link.exe"

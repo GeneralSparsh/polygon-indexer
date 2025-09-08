@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌌 Polygon POL Token Indexer</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="starfield"></div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🌌</div>
+                <div class="logo-text">
+                    <h1>Polygon POL Indexer</h1>
+                    <p>Real-time blockchain data monitoring</p>
+                </div>
+            </div>
+            <div class="status-indicator" id="connectionStatus">
+                <div class="status-dot connected"></div>
+                <span>Connected to Polygon</span>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="dashboard-section">
+                <h2 class="section-title">📊 Binance Net Flow Analysis</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card primary">
+                        <div class="metric-header">
+                            <h3>Total Net Flow</h3>
+                            <div class="metric-trend" id="netFlowTrend">📈</div>
+                        </div>
+                        <div class="metric-value" id="totalNetFlow">+2.85M POL</div>
+                        <div class="metric-label">POL Tokens</div>
+                    </div>
+
+                    <div class="metric-card success">
+                        <div class="metric-header">
+                            <h3>Total Inflow</h3>
+                            <div class="metric-icon">⬇️</div>
+                        </div>
+                        <div class="metric-value" id="totalInflow">15.23M POL</div>
+                        <div class="metric-label">POL Tokens</div>
+                    </div>
+
+                    <div class="metric-card warning">
+                        <div class="metric-header">
+                            <h3>Total Outflow</h3>
+                            <div class="metric-icon">⬆️</div>
+                        </div>
+                        <div class="metric-value" id="totalOutflow">12.39M POL</div>
+                        <div class="metric-label">POL Tokens</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2 class="section-title">🏦 Binance Address Breakdown</h2>
+                <div class="address-grid" id="addressGrid">
+                    <div class="address-card">
+                        <div class="address-header">
+                            <div class="address-title">Binance Hot Wallet 1</div>
+                            <div class="address-value">0xF977...aceC</div>
+                        </div>
+                        <div class="flow-metrics">
+                            <div class="flow-metric inflow">
+                                <div class="flow-metric-label">Inflow</div>
+                                <div class="flow-metric-value">8.23M</div>
+                            </div>
+                            <div class="flow-metric outflow">
+                                <div class="flow-metric-label">Outflow</div>
+                                <div class="flow-metric-value">6.19M</div>
+                            </div>
+                            <div class="flow-metric net">
+                                <div class="flow-metric-label">Net Flow</div>
+                                <div class="flow-metric-value">+2.04M</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="address-card">
+                        <div class="address-header">
+                            <div class="address-title">Binance Hot Wallet 2</div>
+                            <div class="address-value">0xe780...e245</div>
+                        </div>
+                        <div class="flow-metrics">
+                            <div class="flow-metric inflow">
+                                <div class="flow-metric-label">Inflow</div>
+                                <div class="flow-metric-value">4.57M</div>
+                            </div>
+                            <div class="flow-metric outflow">
+                                <div class="flow-metric-label">Outflow</div>
+                                <div class="flow-metric-value">3.88M</div>
+                            </div>
+                            <div class="flow-metric net">
+                                <div class="flow-metric-label">Net Flow</div>
+                                <div class="flow-metric-value">+691K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2 class="section-title">📱 Recent POL Transfers</h2>
+                <div class="transfer-list" id="transferList">
+                    <div class="transfer-item">
+                        <div class="transfer-icon">⬇️</div>
+                        <div class="transfer-details">
+                            <div class="transfer-hash">0x1a2b3c...567890ab</div>
+                            <div class="transfer-addresses">
+                                <span class="from">0x742d...32E2</span> ➡️ <span class="to">0xF977...aceC</span>
+                            </div>
+                        </div>
+                        <div class="transfer-value">50K POL</div>
+                        <div class="transfer-time">2m ago</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2 class="section-title">⚡ System Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Total Transfers</div>
+                            <div class="stat-value" id="totalTransfers">1.85M</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🔗</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Blocks Processed</div>
+                            <div class="stat-value" id="blocksProcessed">892.8K</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Latest Block</div>
+                            <div class="stat-value" id="latestBlock">61847392</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Total Volume</div>
+                            <div class="stat-value" id="totalVolume">4.85B POL</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Polygon POL Token Indexer | Built with ❤️ and Rust</p>
+                <div class="footer-links">
+                    <span>Last Update: <span id="lastUpdate">Sep 07, 2024 4:20 PM UTC</span></span>
+                </div>
+            </div>
+        </footer>
+
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
