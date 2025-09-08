@@ -1,6 +1,6 @@
 # 🌌 Polygon POL Token Real-Time Indexer
 
-A high-performance real-time blockchain data indexer built in Rust that tracks POL token transfers on Polygon blockchain, specifically monitoring net flows to Binance addresses.
+This project indexes real-time POL token transactions on the Polygon blockchain and provides actionable insights into Binance inflows and outflows, enabling traders, analysts, and developers to monitor liquidity movements effectively.
 
 ## 🌟 Features
 
@@ -27,6 +27,12 @@ A high-performance real-time blockchain data indexer built in Rust that tracks P
 
 
 ### Installation
+
+0. **Clone the Repo:**
+```bash
+git clone https://github.com/GeneralSparsh/polygon-indexer.git
+cd polygon-indexer
+```
 
 1. **Extract the project:**
 ```bash
