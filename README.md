@@ -20,6 +20,12 @@ A high-performance real-time blockchain data indexer built in Rust that tracks P
 - SQLite development libraries
 - Node.js 18+ (for frontend dependencies)
 
+### Screenshots
+<img width="1918" height="862" alt="POL-1" src="https://github.com/user-attachments/assets/e0badc69-b6cc-4a9f-a075-6af6ca222198" />
+
+<img width="1917" height="865" alt="POL-2" src="https://github.com/user-attachments/assets/045e23fa-29db-487f-b279-ce41168a4e9d" />
+
+
 ### Installation
 
 1. **Extract the project:**
